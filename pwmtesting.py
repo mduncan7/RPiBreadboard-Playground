@@ -13,7 +13,7 @@ def setup():
 
 def loop():
     while True:
-        _dc = input('Input 0-100: ')
+        _dc = input('Input 0-100: ')    # Input duty cycle for LED
         try:
             dc = int(_dc)
             try:
@@ -22,7 +22,6 @@ def loop():
                 print('Duty cycle must be between 0-100.')
         except ValueError:
             print('Input is not an integer.')
-        
 
 def destroy():
     p.stop()    # end PWM
